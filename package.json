@@ -1,5 +1,5 @@
 {
-  "name": "insur.hsc",
+  "name": "news-daily",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.1.6"
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.1.5",
+    "axios": "^1.18.1"
   }
 }

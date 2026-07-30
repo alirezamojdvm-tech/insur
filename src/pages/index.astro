@@ -1,11 +1,500 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// src/pages/index.astro
+const siteTitle = "بیمه‌یاری | مشاوره و ثبت‌نام بیمه";
+const siteDescription = "ثبت‌نام بیمه با ۲۰۰ هزار تومان هدیه و همراهی در خسارت";
+const siteUrl = "https://insur.hsc-co.ir";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// ⬇️ اطلاعات شخصی شما
+const fullName = "علیرضا محمدی";
+const role = "مشاور تخصصی بیمه";
+const company = "بیمه سامان";
+const agentCode = "۴۱۶۶۷۲";
+const phone = "۰۹۱۲۴۹۱۷۸۲۲";
+const linktree = "https://linktr.ee/alireza.mo.j.dvm";
+
+// ⬇️ لینک عکس (بعد از تنظیم دسترسی عمومی جایگزین کنید)
+const avatarUrl = "https://drive.google.com/uc?id=1x1uKS20filgTG-OyN4JOlv0iceYv3yfD";
+const formspreeId = "mlgqkeoz";
+
+// ⬇️ لیست بیمه‌های مهم
+const insuranceTypes = [
+  { id: "third-party", label: "شخص ثالث خودرو", emoji: "🚗" },
+  { id: "health", label: "تکمیل درمان", emoji: "🏥" },
+  { id: "pet", label: "حیوانات خانگی", emoji: "🐾" },
+  { id: "investment", label: "سرمایه‌گذاری", emoji: "📈" },
+  { id: "body", label: "بدنه خودرو", emoji: "🛡️" },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href={siteUrl} />
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Vazir', 'Tahoma', sans-serif;
+        background: linear-gradient(145deg, #f0f4fe 0%, #e8edf9 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        direction: rtl;
+      }
+
+      .container {
+        max-width: 720px;
+        width: 100%;
+        background: #ffffff;
+        padding: 48px 40px;
+        border-radius: 32px;
+        box-shadow: 0 30px 60px rgba(0, 20, 60, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 16px;
+        border-bottom: 2px solid #eef3fc;
+        padding-bottom: 20px;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-placeholder {
+        font-size: 28px;
+        font-weight: 800;
+        color: #1a5fc7;
+        background: #eef4fe;
+        padding: 8px 18px;
+        border-radius: 16px;
+        border: 2px solid #d9e4f5;
+      }
+
+      .author-area {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .author-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #1a5fc7;
+        flex-shrink: 0;
+        background: #d9e4f5;
+      }
+
+      .author-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .author-name {
+        font-weight: 700;
+        font-size: 16px;
+        color: #0b1e3a;
+      }
+
+      .author-title {
+        font-size: 13px;
+        color: #4a5b7a;
+        font-weight: 400;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #fef3c7;
+        color: #92400e;
+        padding: 6px 18px;
+        border-radius: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        border: 1px solid #fcd34d;
+      }
+
+      h1 {
+        font-size: 34px;
+        font-weight: 800;
+        color: #0b1e3a;
+        text-align: center;
+        margin-bottom: 6px;
+        letter-spacing: -0.5px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #4a5b7a;
+        font-size: 17px;
+        margin-bottom: 32px;
+        font-weight: 400;
+        border-bottom: 2px solid #eef3fc;
+        padding-bottom: 20px;
+      }
+
+      .highlight-box {
+        background: #eef4fe;
+        border-radius: 20px;
+        padding: 20px 24px;
+        margin-bottom: 34px;
+        border-right: 6px solid #1a5fc7;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #0b1e3a;
+      }
+
+      .highlight-item .icon {
+        font-size: 24px;
+        width: 36px;
+        text-align: center;
+      }
+
+      .benefits {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 34px;
+      }
+
+      .benefit-item {
+        background: #eef4fe;
+        padding: 10px 22px;
+        border-radius: 40px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1a4a8a;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid #d9e4f5;
+      }
+
+      .insurance-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .insurance-item {
+        background: #f8faff;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid #e4ebf6;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #0b1e3a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .insurance-item .emoji {
+        font-size: 20px;
+      }
+
+      @media (max-width: 500px) {
+        .insurance-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 22px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        color: #1f2e4a;
+        margin-bottom: 6px;
+      }
+
+      input, select {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e4ebf6;
+        border-radius: 16px;
+        font-size: 16px;
+        background: #f9fcff;
+        transition: all 0.25s ease;
+        font-family: inherit;
+        color: #0b1e3a;
+      }
+
+      input:focus, select:focus {
+        outline: none;
+        border-color: #2a7de1;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(42, 125, 225, 0.12);
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 18px;
+        background: #1a5fc7;
+        color: #fff;
+        border: none;
+        border-radius: 60px;
+        font-size: 20px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        margin-top: 10px;
+        box-shadow: 0 8px 20px rgba(26, 95, 199, 0.25);
+        letter-spacing: 0.3px;
+      }
+
+      .btn-submit:hover {
+        background: #0f4ba8;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(26, 95, 199, 0.35);
+      }
+
+      .btn-submit:active {
+        transform: translateY(0);
+        box-shadow: 0 6px 16px rgba(26, 95, 199, 0.2);
+      }
+
+      .footer-note {
+        text-align: center;
+        margin-top: 28px;
+        font-size: 13px;
+        color: #7a8aa8;
+        border-top: 1px solid #edf2fa;
+        padding-top: 24px;
+      }
+
+      .form-status {
+        display: none;
+        padding: 16px 20px;
+        border-radius: 16px;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .form-status.success {
+        display: block;
+        background: #e2f3e5;
+        color: #0d5e2a;
+        border: 1px solid #b8e0c2;
+      }
+
+      .form-status.error {
+        display: block;
+        background: #fde7e7;
+        color: #a11f1f;
+        border: 1px solid #f5c6c6;
+      }
+
+      @media (max-width: 550px) {
+        .container {
+          padding: 28px 20px;
+        }
+        .header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .author-area {
+          flex-direction: column;
+          align-items: center;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        .benefits {
+          gap: 8px;
+        }
+        .benefit-item {
+          font-size: 12px;
+          padding: 8px 16px;
+        }
+        .btn-submit {
+          font-size: 17px;
+          padding: 16px;
+        }
+        .highlight-item {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <!-- هدر: لوگو + عکس و مشخصات شما -->
+      <div class="header">
+        <div class="logo-area">
+          <div class="logo-placeholder">🛡️ بیمه‌یاری</div>
+        </div>
+        <div class="author-area">
+          <div class="author-avatar">
+            <img src="/images/avatar.jpg" alt={fullName} />
+          </div>
+          <div class="author-info">
+            <span class="author-name">{fullName}</span>
+            <span class="author-title">{role} | {company}</span>
+            <span style="font-size:11px; color:#6b7280;">کد نمایندگی {agentCode}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- نشان ویژه -->
+      <div style="text-align: center;">
+        <span class="badge">🎁 پیشنهاد ویژه</span>
+      </div>
+
+      <h1>بیمه کن و ۲۰۰ هزار تومان هدیه بگیر!</h1>
+      <p class="subtitle">ثبت‌نام هر نوع بیمه + همراهی کامل در فرآیند خسارت</p>
+
+      <!-- باکس مزایای ویژه -->
+      <div class="highlight-box">
+        <div class="highlight-item">
+          <span class="icon">🎁</span>
+          <span>به ازای هر ثبت‌نام، <strong>۲۰۰ هزار تومان</strong> به کیف پولت واریز می‌شود</span>
+        </div>
+        <div class="highlight-item">
+          <span class="icon">🤝</span>
+          <span>تا دریافت کامل خسارت، <strong>همراه و مشاور</strong> شما هستیم</span>
+        </div>
+        <div class="highlight-item">
+          <span class="icon">📋</span>
+          <span>مشاوره رایگان قبل از ثبت‌نام برای انتخاب بهترین بیمه</span>
+        </div>
+      </div>
+
+      <!-- شبکه بیمه‌های مهم -->
+      <div class="insurance-grid">
+        {insuranceTypes.map((item) => (
+          <div class="insurance-item">
+            <span class="emoji">{item.emoji}</span>
+            {item.label}
+          </div>
+        ))}
+      </div>
+
+      <!-- مزایای سریع -->
+      <div class="benefits">
+        <span class="benefit-item">✅ مشاوره تخصصی</span>
+        <span class="benefit-item">⚡ پاسخگویی سریع</span>
+        <span class="benefit-item">🔒 کاملاً رایگان</span>
+        <span class="benefit-item">📞 تماس از سوی کارشناس</span>
+      </div>
+
+      <!-- فرم -->
+      <form id="insurance-form" action="https://formspree.io/f/mlgqkeoz" method="POST">
+        <div class="form-group">
+          <label for="name">نام و نام خانوادگی</label>
+          <input type="text" id="name" name="name" placeholder="مثال: علیرضا محمدی" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">شماره تماس</label>
+          <input type="tel" id="phone" name="phone" placeholder="مثال: ۰۹۱۲۳۴۵۶۷۸۹" required />
+        </div>
+
+        <div class="form-group">
+          <label for="insurance-type">نوع بیمه مورد نظر</label>
+          <select id="insurance-type" name="insurance-type">
+            <option value="">یک گزینه را انتخاب کنید...</option>
+            {insuranceTypes.map((item) => (
+              <option value={item.id}>{item.emoji} {item.label}</option>
+            ))}
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">🚀 دریافت مشاوره و هدیه ۲۰۰ هزار تومانی</button>
+      </form>
+
+      <div id="form-status" class="form-status"></div>
+
+      <div class="footer-note">
+        🔒 اطلاعات شما نزد ما کاملاً محفوظ است و تنها برای تماس استفاده می‌شود.
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById('insurance-form');
+      const statusDiv = document.getElementById('form-status');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+            },
+            body: formData,
+          });
+
+          if (response.ok) {
+            statusDiv.className = 'form-status success';
+            statusDiv.textContent = '✅ فرم با موفقیت ارسال شد! کارشناسان ما به‌زودی با شما تماس می‌گیرند.';
+            form.reset();
+          } else {
+            statusDiv.className = 'form-status error';
+            statusDiv.textContent = '❌ خطا در ارسال فرم. لطفاً دوباره تلاش کنید.';
+          }
+        } catch (error) {
+          statusDiv.className = 'form-status error';
+          statusDiv.textContent = '❌ خطا در ارتباط با سرور. لطفاً اتصال اینترنت خود را بررسی کنید.';
+        }
+
+        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    </script>
+  </body>
+</html>
