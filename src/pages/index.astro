@@ -4,25 +4,20 @@ const siteTitle = "بیمه‌یاری | مشاوره و ثبت‌نام بیم�
 const siteDescription = "ثبت‌نام بیمه با ۲۰۰ هزار تومان هدیه و همراهی در خسارت";
 const siteUrl = "https://insur.hsc-co.ir";
 
-// ⬇️ اطلاعات شخصی شما
 const fullName = "علیرضا محمدی";
 const role = "مشاور تخصصی بیمه";
 const company = "بیمه سامان";
 const agentCode = "۴۱۶۶۷۲";
 const phone = "۰۹۱۲۴۹۱۷۸۲۲";
-const linktree = "https://linktr.ee/alireza.mo.j.dvm";
-
-// ⬇️ لینک عکس (بعد از تنظیم دسترسی عمومی جایگزین کنید)
-const avatarUrl = "https://drive.google.com/uc?id=1x1uKS20filgTG-OyN4JOlv0iceYv3yfD";
+const avatarInitial = "ع";
 const formspreeId = "mlgqkeoz";
 
-// ⬇️ لیست بیمه‌های مهم
 const insuranceTypes = [
-  { id: "third-party", label: "شخص ثالث خودرو", emoji: "🚗" },
-  { id: "health", label: "تکمیل درمان", emoji: "🏥" },
-  { id: "pet", label: "حیوانات خانگی", emoji: "🐾" },
-  { id: "investment", label: "سرمایه‌گذاری", emoji: "📈" },
-  { id: "body", label: "بدنه خودرو", emoji: "🛡️" },
+  { id: "third-party", label: "شخص ثالث", emoji: "🚗" },
+  { id: "health",      label: "تکمیل درمان", emoji: "🏥" },
+  { id: "pet",         label: "حیوانات خانگی", emoji: "🐾" },
+  { id: "investment",  label: "سرمایه‌گذاری", emoji: "📈" },
+  { id: "body",        label: "بدنه خودرو", emoji: "🛡️" },
 ];
 ---
 
@@ -39,458 +34,611 @@ const insuranceTypes = [
     <meta property="og:url" content={siteUrl} />
     <meta property="og:type" content="website" />
     <link rel="canonical" href={siteUrl} />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+      :root {
+        --bg:            #EDF1FA;
+        --surface:       #FFFFFF;
+        --primary:       #173598;
+        --primary-hover: #0F2678;
+        --primary-light: #EBF0FD;
+        --primary-mid:   #C5D4F8;
+        --gold:          #B8720C;
+        --gold-bg:       #FDF4E3;
+        --gold-border:   #F0C87A;
+        --text:          #091832;
+        --text-mid:      #354567;
+        --text-muted:    #6578A0;
+        --border:        #DDE6F6;
+        --success-bg:    #E8FAF1;
+        --success-text:  #0D6640;
+        --r-card:        24px;
+        --r-pill:        60px;
+        --r-input:       14px;
       }
 
       body {
-        font-family: 'Vazir', 'Tahoma', sans-serif;
-        background: linear-gradient(145deg, #f0f4fe 0%, #e8edf9 100%);
+        font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+        background: var(--bg);
         min-height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        padding: 20px;
+        padding: 32px 16px 48px;
+        color: var(--text);
         direction: rtl;
+        line-height: 1.6;
       }
 
-      .container {
-        max-width: 720px;
+      /* ── Page Layout ── */
+      .page {
+        max-width: 680px;
         width: 100%;
-        background: #ffffff;
-        padding: 48px 40px;
-        border-radius: 32px;
-        box-shadow: 0 30px 60px rgba(0, 20, 60, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
       }
 
-      .header {
+      /* ── Card base ── */
+      .card {
+        background: var(--surface);
+        border-radius: var(--r-card);
+        border: 1px solid rgba(195, 212, 248, 0.7);
+        box-shadow: 0 4px 20px rgba(20, 40, 110, 0.07);
+        animation: fadeUp 0.45s ease both;
+      }
+      .card:nth-child(1) { animation-delay: 0.00s; }
+      .card:nth-child(2) { animation-delay: 0.06s; }
+      .card:nth-child(3) { animation-delay: 0.12s; }
+      .card:nth-child(4) { animation-delay: 0.18s; }
+      .card:nth-child(5) { animation-delay: 0.24s; }
+      .card:nth-child(6) { animation-delay: 0.30s; }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(14px); }
+        to   { opacity: 1; transform: translateY(0);    }
+      }
+
+      /* ── Header ── */
+      .header-card {
+        padding: 18px 28px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 24px;
-        flex-wrap: wrap;
-        gap: 16px;
-        border-bottom: 2px solid #eef3fc;
-        padding-bottom: 20px;
+        gap: 12px;
       }
 
-      .logo-area {
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-icon {
+        width: 42px;
+        height: 42px;
+        background: var(--primary);
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .logo-text {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary);
+        letter-spacing: -0.3px;
+      }
+
+      .advisor {
         display: flex;
         align-items: center;
         gap: 12px;
       }
-
-      .logo-placeholder {
-        font-size: 28px;
-        font-weight: 800;
-        color: #1a5fc7;
-        background: #eef4fe;
-        padding: 8px 18px;
-        border-radius: 16px;
-        border: 2px solid #d9e4f5;
+      .advisor-info { text-align: right; }
+      .advisor-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text);
       }
-
-      .author-area {
+      .advisor-role {
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+      .advisor-code {
+        font-size: 11px;
+        color: var(--primary);
+        background: var(--primary-light);
+        padding: 2px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 4px;
+        border: 1px solid var(--primary-mid);
+      }
+      .advisor-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2.5px solid var(--primary);
+        overflow: hidden;
+        background: var(--primary-light);
+        flex-shrink: 0;
         display: flex;
         align-items: center;
-        gap: 14px;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary);
       }
-
-      .author-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 3px solid #1a5fc7;
-        flex-shrink: 0;
-        background: #d9e4f5;
-      }
-
-      .author-avatar img {
+      .advisor-avatar img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .author-info {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .author-name {
-        font-weight: 700;
-        font-size: 16px;
-        color: #0b1e3a;
-      }
-
-      .author-title {
-        font-size: 13px;
-        color: #4a5b7a;
-        font-weight: 400;
-      }
-
-      .badge {
-        display: inline-block;
-        background: #fef3c7;
-        color: #92400e;
-        padding: 6px 18px;
-        border-radius: 40px;
-        font-size: 14px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        border: 1px solid #fcd34d;
-      }
-
-      h1 {
-        font-size: 34px;
-        font-weight: 800;
-        color: #0b1e3a;
+      /* ── Hero ── */
+      .hero-card {
+        padding: 40px 36px 36px;
         text-align: center;
-        margin-bottom: 6px;
-        letter-spacing: -0.5px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-card::before {
+        content: '';
+        position: absolute;
+        top: -80px; right: -80px;
+        width: 260px; height: 260px;
+        background: radial-gradient(circle, rgba(23,53,152,.07) 0%, transparent 65%);
+        pointer-events: none;
+      }
+      .hero-card::after {
+        content: '';
+        position: absolute;
+        bottom: -60px; left: -60px;
+        width: 200px; height: 200px;
+        background: radial-gradient(circle, rgba(184,114,12,.06) 0%, transparent 65%);
+        pointer-events: none;
       }
 
-      .subtitle {
-        text-align: center;
-        color: #4a5b7a;
-        font-size: 17px;
-        margin-bottom: 32px;
-        font-weight: 400;
-        border-bottom: 2px solid #eef3fc;
-        padding-bottom: 20px;
-      }
-
-      .highlight-box {
-        background: #eef4fe;
-        border-radius: 20px;
-        padding: 20px 24px;
-        margin-bottom: 34px;
-        border-right: 6px solid #1a5fc7;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .highlight-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 16px;
-        font-weight: 500;
-        color: #0b1e3a;
-      }
-
-      .highlight-item .icon {
-        font-size: 24px;
-        width: 36px;
-        text-align: center;
-      }
-
-      .benefits {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-bottom: 34px;
-      }
-
-      .benefit-item {
-        background: #eef4fe;
-        padding: 10px 22px;
-        border-radius: 40px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #1a4a8a;
+      .gift-badge {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        border: 1px solid #d9e4f5;
-      }
-
-      .insurance-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-bottom: 28px;
-      }
-
-      .insurance-item {
-        background: #f8faff;
-        padding: 12px 16px;
-        border-radius: 12px;
-        border: 1px solid #e4ebf6;
-        text-align: center;
-        font-weight: 500;
-        font-size: 14px;
-        color: #0b1e3a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .insurance-item .emoji {
-        font-size: 20px;
-      }
-
-      @media (max-width: 500px) {
-        .insurance-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .form-group {
+        background: var(--gold-bg);
+        color: var(--gold);
+        border: 1px solid var(--gold-border);
+        padding: 6px 18px;
+        border-radius: 40px;
+        font-size: 13px;
+        font-weight: 700;
         margin-bottom: 22px;
       }
 
+      .hero-title {
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--text);
+        line-height: 1.45;
+        margin-bottom: 10px;
+        letter-spacing: -0.4px;
+      }
+      .hero-title .amount {
+        color: var(--primary);
+        position: relative;
+        white-space: nowrap;
+      }
+      .hero-title .amount::after {
+        content: '';
+        position: absolute;
+        bottom: -1px; right: 0; left: 0;
+        height: 3px;
+        background: var(--gold);
+        border-radius: 2px;
+      }
+
+      .hero-sub {
+        font-size: 15px;
+        color: var(--text-muted);
+        font-weight: 400;
+      }
+
+      /* ── Benefits ── */
+      .benefits-card { padding: 26px 28px; }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .benefit-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+      .benefit-icon {
+        width: 50px; height: 50px;
+        background: var(--primary-light);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        border: 1px solid var(--primary-mid);
+      }
+      .benefit-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .benefit-desc {
+        font-size: 11.5px;
+        color: var(--text-muted);
+        line-height: 1.55;
+      }
+
+      /* ── Insurance Types ── */
+      .ins-card { padding: 22px 28px; }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--text-muted);
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+      .ins-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
+      .ins-item {
+        background: var(--primary-light);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 15px 6px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        cursor: default;
+      }
+      .ins-item:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(23,53,152,.22);
+      }
+      .ins-item:hover .ins-label { color: #fff; }
+      .ins-emoji { font-size: 22px; line-height: 1; }
+      .ins-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text-mid);
+        text-align: center;
+        line-height: 1.35;
+        transition: color 0.2s;
+      }
+
+      /* ── Form ── */
+      .form-card { padding: 32px 36px; }
+
+      .form-title {
+        font-size: 19px;
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 18px;
+      }
+
+      .quick-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 22px;
+      }
+      .qbadge {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--primary);
+        background: var(--primary-light);
+        border: 1px solid var(--primary-mid);
+        padding: 5px 12px;
+        border-radius: 20px;
+      }
+
+      .form-group { margin-bottom: 18px; }
+
       label {
         display: block;
+        font-size: 13px;
         font-weight: 600;
-        font-size: 14px;
-        color: #1f2e4a;
-        margin-bottom: 6px;
+        color: var(--text-mid);
+        margin-bottom: 8px;
       }
 
-      input, select {
+      input,
+      select {
         width: 100%;
-        padding: 14px 18px;
-        border: 2px solid #e4ebf6;
-        border-radius: 16px;
-        font-size: 16px;
-        background: #f9fcff;
-        transition: all 0.25s ease;
-        font-family: inherit;
-        color: #0b1e3a;
+        height: 52px;
+        padding: 0 18px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--r-input);
+        font-size: 15px;
+        font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+        background: #F7FAFF;
+        color: var(--text);
+        transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      input::placeholder { color: var(--text-muted); }
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(23,53,152,.10);
       }
 
-      input:focus, select:focus {
-        outline: none;
-        border-color: #2a7de1;
-        background: #ffffff;
-        box-shadow: 0 0 0 4px rgba(42, 125, 225, 0.12);
+      .select-wrap { position: relative; }
+      .select-wrap::after {
+        content: '▾';
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-muted);
+        pointer-events: none;
+        font-size: 14px;
       }
 
       .btn-submit {
         width: 100%;
-        padding: 18px;
-        background: #1a5fc7;
+        height: 58px;
+        background: var(--primary);
         color: #fff;
         border: none;
-        border-radius: 60px;
-        font-size: 20px;
+        border-radius: var(--r-pill);
+        font-size: 17px;
         font-weight: 700;
+        font-family: 'Vazirmatn', 'Tahoma', sans-serif;
         cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: inherit;
-        margin-top: 10px;
-        box-shadow: 0 8px 20px rgba(26, 95, 199, 0.25);
-        letter-spacing: 0.3px;
+        transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
       }
-
       .btn-submit:hover {
-        background: #0f4ba8;
-        transform: translateY(-3px);
-        box-shadow: 0 12px 28px rgba(26, 95, 199, 0.35);
+        background: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(23,53,152,.30);
       }
+      .btn-submit:active { transform: translateY(0); }
+      .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
 
-      .btn-submit:active {
-        transform: translateY(0);
-        box-shadow: 0 6px 16px rgba(26, 95, 199, 0.2);
-      }
-
-      .footer-note {
-        text-align: center;
-        margin-top: 28px;
-        font-size: 13px;
-        color: #7a8aa8;
-        border-top: 1px solid #edf2fa;
-        padding-top: 24px;
-      }
-
+      /* Status */
       .form-status {
         display: none;
-        padding: 16px 20px;
-        border-radius: 16px;
-        margin-top: 20px;
-        text-align: center;
+        margin-top: 16px;
+        padding: 14px 18px;
+        border-radius: 14px;
+        font-size: 14px;
         font-weight: 500;
-        font-size: 15px;
+        text-align: center;
       }
-
       .form-status.success {
         display: block;
-        background: #e2f3e5;
-        color: #0d5e2a;
-        border: 1px solid #b8e0c2;
+        background: var(--success-bg);
+        color: var(--success-text);
+        border: 1px solid #B5E8D0;
       }
-
       .form-status.error {
         display: block;
-        background: #fde7e7;
-        color: #a11f1f;
-        border: 1px solid #f5c6c6;
+        background: #FEE8E8;
+        color: #A01B1B;
+        border: 1px solid #F5C6C6;
       }
 
-      @media (max-width: 550px) {
-        .container {
-          padding: 28px 20px;
-        }
-        .header {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        .author-area {
-          flex-direction: column;
-          align-items: center;
-        }
-        h1 {
-          font-size: 24px;
-        }
-        .benefits {
-          gap: 8px;
-        }
-        .benefit-item {
-          font-size: 12px;
-          padding: 8px 16px;
-        }
-        .btn-submit {
-          font-size: 17px;
-          padding: 16px;
-        }
-        .highlight-item {
-          font-size: 14px;
-        }
+      /* ── Footer ── */
+      .footer-card {
+        padding: 16px 28px;
+        text-align: center;
+      }
+      .footer-text {
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 600px) {
+        body { padding: 16px 12px 40px; }
+        .hero-card  { padding: 28px 20px 24px; }
+        .hero-title { font-size: 23px; }
+        .header-card,
+        .benefits-card,
+        .ins-card,
+        .footer-card { padding-inline: 20px; }
+        .form-card  { padding: 26px 20px; }
+        .benefits-grid { gap: 10px; }
+        .ins-grid { grid-template-columns: repeat(3, 1fr); }
+      }
+      @media (max-width: 400px) {
+        .hero-title { font-size: 20px; }
+        .ins-grid   { grid-template-columns: repeat(2, 1fr); }
+        .advisor-role { display: none; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card { animation: none; }
+        .ins-item, .btn-submit { transition: none; }
       }
     </style>
   </head>
+
   <body>
-    <div class="container" id="app">
-      <!-- هدر: لوگو + عکس و مشخصات شما -->
-      <div class="header">
-        <div class="logo-area">
-          <div class="logo-placeholder">🛡️ بیمه‌یاری</div>
+    <div class="page">
+
+      <!-- ① Header -->
+      <header class="card header-card">
+        <div class="logo">
+          <div class="logo-icon">🛡️</div>
+          <span class="logo-text">بیمه‌یاری</span>
         </div>
-        <div class="author-area">
-          <div class="author-avatar">
-            <img src="/images/avatar.jpg" alt={fullName} />
+        <div class="advisor">
+          <div class="advisor-info">
+            <div class="advisor-name">{fullName}</div>
+            <div class="advisor-role">{role} | {company}</div>
+            <span class="advisor-code">کد {agentCode}</span>
           </div>
-          <div class="author-info">
-            <span class="author-name">{fullName}</span>
-            <span class="author-title">{role} | {company}</span>
-            <span style="font-size:11px; color:#6b7280;">کد نمایندگی {agentCode}</span>
+          <div class="advisor-avatar">
+            <img src="/images/avatar.jpg" alt={fullName}
+                 onerror="this.style.display='none'" />
+            {avatarInitial}
           </div>
         </div>
-      </div>
+      </header>
 
-      <!-- نشان ویژه -->
-      <div style="text-align: center;">
-        <span class="badge">🎁 پیشنهاد ویژه</span>
-      </div>
+      <!-- ② Hero -->
+      <section class="card hero-card">
+        <div class="gift-badge">🎁 پیشنهاد ویژه</div>
+        <h1 class="hero-title">
+          بیمه کن و <span class="amount">۲۰۰ هزار تومان</span><br />هدیه بگیر!
+        </h1>
+        <p class="hero-sub">ثبت‌نام هر نوع بیمه &plus; مشاوره رایگان &plus; همراهی کامل در فرآیند خسارت</p>
+      </section>
 
-      <h1>بیمه کن و ۲۰۰ هزار تومان هدیه بگیر!</h1>
-      <p class="subtitle">ثبت‌نام هر نوع بیمه + همراهی کامل در فرآیند خسارت</p>
-
-      <!-- باکس مزایای ویژه -->
-      <div class="highlight-box">
-        <div class="highlight-item">
-          <span class="icon">🎁</span>
-          <span>به ازای هر ثبت‌نام، <strong>۲۰۰ هزار تومان</strong> به کیف پولت واریز می‌شود</span>
-        </div>
-        <div class="highlight-item">
-          <span class="icon">🤝</span>
-          <span>تا دریافت کامل خسارت، <strong>همراه و مشاور</strong> شما هستیم</span>
-        </div>
-        <div class="highlight-item">
-          <span class="icon">📋</span>
-          <span>مشاوره رایگان قبل از ثبت‌نام برای انتخاب بهترین بیمه</span>
-        </div>
-      </div>
-
-      <!-- شبکه بیمه‌های مهم -->
-      <div class="insurance-grid">
-        {insuranceTypes.map((item) => (
-          <div class="insurance-item">
-            <span class="emoji">{item.emoji}</span>
-            {item.label}
+      <!-- ③ Benefits -->
+      <section class="card benefits-card">
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">🎁</div>
+            <div class="benefit-name">هدیه ۲۰۰ هزار تومانی</div>
+            <div class="benefit-desc">واریز به کیف پول به ازای هر ثبت‌نام</div>
           </div>
-        ))}
-      </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🤝</div>
+            <div class="benefit-name">همراهی در خسارت</div>
+            <div class="benefit-desc">تا دریافت کامل خسارت همراه شما هستیم</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📋</div>
+            <div class="benefit-name">مشاوره رایگان</div>
+            <div class="benefit-desc">راهنمایی متخصص برای انتخاب بهترین بیمه</div>
+          </div>
+        </div>
+      </section>
 
-      <!-- مزایای سریع -->
-      <div class="benefits">
-        <span class="benefit-item">✅ مشاوره تخصصی</span>
-        <span class="benefit-item">⚡ پاسخگویی سریع</span>
-        <span class="benefit-item">🔒 کاملاً رایگان</span>
-        <span class="benefit-item">📞 تماس از سوی کارشناس</span>
-      </div>
+      <!-- ④ Insurance Types -->
+      <section class="card ins-card">
+        <div class="section-label">انواع بیمه تحت پوشش</div>
+        <div class="ins-grid">
+          {insuranceTypes.map((item) => (
+            <div class="ins-item">
+              <span class="ins-emoji">{item.emoji}</span>
+              <span class="ins-label">{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <!-- فرم -->
-      <form id="insurance-form" action="https://formspree.io/f/mlgqkeoz" method="POST">
-        <div class="form-group">
-          <label for="name">نام و نام خانوادگی</label>
-          <input type="text" id="name" name="name" placeholder="مثال: علیرضا محمدی" required />
+      <!-- ⑤ Form -->
+      <section class="card form-card">
+        <h2 class="form-title">دریافت مشاوره رایگان</h2>
+
+        <div class="quick-badges">
+          <span class="qbadge">✅ مشاوره تخصصی</span>
+          <span class="qbadge">⚡ پاسخگویی سریع</span>
+          <span class="qbadge">🔒 کاملاً رایگان</span>
+          <span class="qbadge">📞 تماس از کارشناس</span>
         </div>
 
-        <div class="form-group">
-          <label for="phone">شماره تماس</label>
-          <input type="tel" id="phone" name="phone" placeholder="مثال: ۰۹۱۲۳۴۵۶۷۸۹" required />
-        </div>
+        <form id="insurance-form"
+              action={`https://formspree.io/f/${formspreeId}`}
+              method="POST">
 
-        <div class="form-group">
-          <label for="insurance-type">نوع بیمه مورد نظر</label>
-          <select id="insurance-type" name="insurance-type">
-            <option value="">یک گزینه را انتخاب کنید...</option>
-            {insuranceTypes.map((item) => (
-              <option value={item.id}>{item.emoji} {item.label}</option>
-            ))}
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="name">نام و نام خانوادگی</label>
+            <input type="text" id="name" name="name"
+                   placeholder="علیرضا محمدی" required />
+          </div>
 
-        <button type="submit" class="btn-submit">🚀 دریافت مشاوره و هدیه ۲۰۰ هزار تومانی</button>
-      </form>
+          <div class="form-group">
+            <label for="phone">شماره تماس</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="۰۹۱۲۳۴۵۶۷۸۹" required />
+          </div>
 
-      <div id="form-status" class="form-status"></div>
+          <div class="form-group">
+            <label for="insurance-type">نوع بیمه مورد نظر</label>
+            <div class="select-wrap">
+              <select id="insurance-type" name="insurance-type">
+                <option value="">یک گزینه را انتخاب کنید…</option>
+                {insuranceTypes.map((item) => (
+                  <option value={item.id}>{item.emoji} {item.label}</option>
+                ))}
+              </select>
+            </div>
+          </div>
 
-      <div class="footer-note">
-        🔒 اطلاعات شما نزد ما کاملاً محفوظ است و تنها برای تماس استفاده می‌شود.
-      </div>
+          <button type="submit" class="btn-submit" id="submit-btn">
+            🚀 دریافت مشاوره و هدیه ۲۰۰ هزار تومانی
+          </button>
+        </form>
+
+        <div id="form-status" class="form-status"></div>
+      </section>
+
+      <!-- ⑥ Footer -->
+      <footer class="card footer-card">
+        <p class="footer-text">
+          🔒 اطلاعات شما کاملاً محفوظ است و تنها برای تماس استفاده می‌شود
+        </p>
+      </footer>
+
     </div>
 
     <script>
-      const form = document.getElementById('insurance-form');
+      const form      = document.getElementById('insurance-form');
       const statusDiv = document.getElementById('form-status');
+      const btn       = document.getElementById('submit-btn');
+      const original  = btn.innerHTML;
 
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
-
-        const formData = new FormData(form);
+        btn.innerHTML  = '⏳ در حال ارسال…';
+        btn.disabled   = true;
 
         try {
-          const response = await fetch(form.action, {
+          const res = await fetch(form.action, {
             method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-            },
-            body: formData,
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form),
           });
 
-          if (response.ok) {
-            statusDiv.className = 'form-status success';
+          if (res.ok) {
+            statusDiv.className  = 'form-status success';
             statusDiv.textContent = '✅ فرم با موفقیت ارسال شد! کارشناسان ما به‌زودی با شما تماس می‌گیرند.';
+            btn.innerHTML = '✅ ارسال شد!';
             form.reset();
           } else {
-            statusDiv.className = 'form-status error';
-            statusDiv.textContent = '❌ خطا در ارسال فرم. لطفاً دوباره تلاش کنید.';
+            throw new Error();
           }
-        } catch (error) {
-          statusDiv.className = 'form-status error';
-          statusDiv.textContent = '❌ خطا در ارتباط با سرور. لطفاً اتصال اینترنت خود را بررسی کنید.';
+        } catch {
+          statusDiv.className  = 'form-status error';
+          statusDiv.textContent = '❌ خطا در ارسال. لطفاً دوباره تلاش کنید.';
+          btn.innerHTML = original;
+          btn.disabled  = false;
         }
 
         statusDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
