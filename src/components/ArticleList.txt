@@ -1,0 +1,128 @@
+---
+const articles = [
+  {
+    slug: 'gift',
+    title: 'هدیه ۲۰۰ هزار تومانی',
+    description: 'با ثبت‌نام هر نوع بیمه، ۲۰۰ هزار تومان هدیه نقدی دریافت کنید.',
+    emoji: '🎁',
+    category: 'پیشنهاد ویژه'
+  },
+  {
+    slug: 'claim-support',
+    title: 'همراهی در خسارت',
+    description: 'تا دریافت کامل خسارت همراه شما هستیم.',
+    emoji: '🤝',
+    category: 'خدمات'
+  },
+  {
+    slug: 'free-consultation',
+    title: 'مشاوره رایگان',
+    description: 'راهنمایی متخصص برای انتخاب بهترین بیمه.',
+    emoji: '📋',
+    category: 'خدمات'
+  },
+  {
+    slug: 'third-party',
+    title: 'بیمه شخص ثالث',
+    description: 'پوشش جامع و مقرون‌به‌صرفه برای رانندگان.',
+    emoji: '🚗',
+    category: 'انواع بیمه'
+  },
+  {
+    slug: 'health-insurance',
+    title: 'بیمه تکمیل درمان',
+    description: 'آرامش خاطر در حوزه سلامت با پوشش‌های گسترده.',
+    emoji: '🏥',
+    category: 'انواع بیمه'
+  },
+  {
+    slug: 'pet-insurance',
+    title: 'بیمه حیوانات خانگی',
+    description: 'از دوست پشمالوی خود مراقبت کنید.',
+    emoji: '🐾',
+    category: 'انواع بیمه'
+  },
+  {
+    slug: 'investment-insurance',
+    title: 'بیمه سرمایه‌گذاری',
+    description: 'آینده‌ی مالی خود را بیمه کنید.',
+    emoji: '📈',
+    category: 'انواع بیمه'
+  },
+  {
+    slug: 'body-insurance',
+    title: 'بیمه بدنه خودرو',
+    description: 'از ماشین خود در برابر خسارت‌های ناگهانی محافظت کنید.',
+    emoji: '🛡️',
+    category: 'انواع بیمه'
+  }
+];
+---
+
+<style>
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .article-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+  }
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(23, 53, 152, 0.12);
+  }
+  .article-card .emoji {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .article-card .category {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 2px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .article-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .article-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+</style>
+
+<div>
+  <h2 class="section-title">📚 مقالات تخصصی بیمه سامان</h2>
+  <div class="articles-grid">
+    {articles.map((article) => (
+      <a href={`/articles/${article.slug}`} class="article-card">
+        <span class="emoji">{article.emoji}</span>
+        <span class="category">{article.category}</span>
+        <h3>{article.title}</h3>
+        <p>{article.description}</p>
+      </a>
+    ))}
+  </div>
+</div>
