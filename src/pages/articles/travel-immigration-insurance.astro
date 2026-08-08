@@ -1,0 +1,805 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+// کلمات کلیدی سئوی محلی و جذب کاربر
+const title = "بیمه مهاجرت و مسافرتی سامان در ورامین، پاکدشت، پیشوا و قرچک | پوشش بین‌المللی";
+const description = "خرید بیمه مسافرتی و مهاجرت سامان با پوشش بین‌المللی، درمانی و اقامتی در ورامین، پیشوا، قرچک و پاکدشت. مشاوره و صدور فوری با علیرضا محمدی (کد ۴۱۶۶۷۲).";
+
+// اسکیما مارک‌آپ پیشرفته برای بیمه مسافرتی (Local SEO)
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "بیمه‌یار - نمایندگی بیمه سامان (کد ۴۱۶۶۷۲)",
+  "url": "https://insur.hsc-co.ir",
+  "description": "صدور و مشاوره بیمه مسافرتی و مهاجرت سامان در جنوب شرق استان تهران.",
+  "areaServed": [
+    { "@type": "City", "name": "ورامین" },
+    { "@type": "City", "name": "پیشوا" },
+    { "@type": "City", "name": "قرچک" },
+    { "@type": "City", "name": "پاکدشت" }
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "صدور و مشاوره بیمه مسافرتی و مهاجرت"
+    }
+  },
+  "agent": {
+    "@type": "Person",
+    "name": "علیرضا محمدی"
+  }
+};
+---
+
+<ArticleLayout title={title} description={description} articleTitle={title}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- هدر جذاب -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">✈️ ویژه مسافران و مهاجران</span>
+      <h1 class="hero-title">با <span class="highlight">بیمه مسافرتی و مهاجرت</span> سامان، سفری امن را تجربه کنید</h1>
+      <p class="hero-desc">
+        پوشش کامل درمانی، اقامتی و بیمه‌ای برای مسافران، دانشجویان و مهاجران ایرانی در سراسر جهان.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">۱۸۰+</span>
+          <span class="stat-label">کشور تحت پوشش</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">۲۴/۷</span>
+          <span class="stat-label">پشتیبانی بین‌المللی</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">€۱۰۰K</span>
+          <span class="stat-label">سقف پوشش درمانی</span>
+        </div>
+      </div>
+      <a href="/#form" class="hero-cta">📞 دریافت مشاوره رایگان</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-icon">🌍</div>
+    </div>
+  </div>
+
+  <!-- بخش معرفی -->
+  <div class="intro-section">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2>چرا <span class="highlight">بیمه مسافرتی و مهاجرت</span>؟</h2>
+        <p>
+          <strong>بیمه مسافرتی و مهاجرت</strong> یکی از ضروری‌ترین بیمه‌نامه‌ها برای افرادی است که به خارج از کشور سفر می‌کنند یا قصد مهاجرت دارند. هزینه‌های درمانی در بسیاری از کشورها بسیار بالا است و یک بیمه‌نامه معتبر می‌تواند شما را از هزینه‌های سنگین نجات دهد.
+        </p>
+        <p>
+          <strong>بیمه مسافرتی و مهاجرت سامان</strong> با ارائه پوشش‌های کامل بین‌المللی، یکی از بهترین گزینه‌ها برای مسافران، دانشجویان، مهاجران و توریست‌ها است. ما در <strong>بیمه‌یار</strong>، خدمات مشاوره تخصصی، <strong>بررسی شرایط</strong> و <strong>صدور فوری</strong> را برای همشهریان عزیز در <strong>ورامین، پاکدشت، پیشوا و قرچک</strong> به بهترین شکل ممکن انجام می‌دهیم.
+        </p>
+      </div>
+      <div class="intro-benefits">
+        <div class="benefit-card">
+          <span class="benefit-icon">🏥</span>
+          <h4>درمان بین‌المللی</h4>
+          <p>پوشش هزینه‌های درمانی در ۱۸۰+ کشور</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🛡️</span>
+          <h4>پوشش اقامتی</h4>
+          <p>جبران هزینه‌های اقامت در صورت بستری</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">✈️</span>
+          <h4>تاخیر و کنسلی</h4>
+          <p>پوشش تاخیر و کنسلی پرواز</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">💼</span>
+          <h4>پوشش بار و مدارک</h4>
+          <p>پوشش سرقت یا گم شدن بار و مدارک</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش مزایا -->
+  <div class="features-section">
+    <h2 class="section-title">✨ مزایای <span class="highlight">بیمه مسافرتی و مهاجرت</span> سامان</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏥</div>
+        <h4>پوشش کامل درمانی</h4>
+        <p>هزینه‌های بستری، جراحی، دارو، آزمایش و تصویربرداری در سراسر جهان تحت پوشش این بیمه قرار می‌گیرد.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚑</div>
+        <h4>انتقال اضطراری</h4>
+        <p>در صورت بروز حادثه، هزینه‌های انتقال به بیمارستان یا بازگشت به ایران تحت پوشش است.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h4>پوشش اقامتی</h4>
+        <p>در صورت بستری، هزینه‌های اقامت همراه بیمار در هتل تحت پوشش قرار می‌گیرد.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✈️</div>
+        <h4>تاخیر و کنسلی پرواز</h4>
+        <p>جبران هزینه‌های ناشی از تاخیر یا کنسلی پرواز به دلایل غیرمترقبه.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💼</div>
+        <h4>پوشش بار و مدارک</h4>
+        <p>سرقت یا گم شدن بار، مدارک سفر، پاسپورت و وسایل شخصی تحت پوشش است.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📞</div>
+        <h4>پشتیبانی ۲۴/۷</h4>
+        <p>تماس با کارشناسان در هر زمان و مکانی برای راهنمایی و پشتیبانی.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش انواع بیمه مسافرتی -->
+  <div class="types-section">
+    <h2 class="section-title">📋 انواع <span class="highlight">بیمه مسافرتی و مهاجرت</span></h2>
+    <div class="types-grid">
+      <div class="type-card">
+        <span class="type-icon">🛫</span>
+        <h4>بیمه مسافرتی توریستی</h4>
+        <p>مناسب برای توریست‌ها و مسافران کوتاه‌مدت با پوشش درمانی، بار، تاخیر پرواز و ...</p>
+        <ul>
+          <li>پوشش درمانی تا €۵۰K</li>
+          <li>مدت ۳ تا ۹۰ روز</li>
+          <li>پوشش بار و مدارک</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">📚</span>
+        <h4>بیمه مسافرتی دانشجویی</h4>
+        <p>ویژه دانشجویانی که برای تحصیل به خارج از کشور می‌روند با پوشش‌های بلندمدت و کامل.</p>
+        <ul>
+          <li>پوشش درمانی تا €۱۰۰K</li>
+          <li>مدت ۶ ماه تا ۲ سال</li>
+          <li>پوشش بازگشت به کشور</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">💼</span>
+        <h4>بیمه مسافرتی کاری</h4>
+        <p>مناسب برای افرادی که برای کار و کسب‌وکار به خارج از کشور سفر می‌کنند.</p>
+        <ul>
+          <li>پوشش درمانی تا €۷۵K</li>
+          <li>مدت ۳ تا ۱۸۰ روز</li>
+          <li>پوشش مسئولیت مدنی</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">🏠</span>
+        <h4>بیمه مهاجرت</h4>
+        <p>ویژه افرادی که قصد مهاجرت و اقامت طولانی‌مدت در خارج از کشور را دارند.</p>
+        <ul>
+          <li>پوشش درمانی تا €۱۵۰K</li>
+          <li>مدت ۱ تا ۵ سال</li>
+          <li>پوشش کامل اقامتی</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش پوشش‌ها -->
+  <div class="coverage-section">
+    <h2 class="section-title">🛡️ پوشش‌های <span class="highlight">بیمه مسافرتی و مهاجرت</span> سامان</h2>
+    <div class="coverage-grid">
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>هزینه‌های درمانی</h4>
+          <p>بستری، جراحی، دارو، آزمایش و تصویربرداری</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>انتقال اضطراری</h4>
+          <p>انتقال به بیمارستان یا بازگشت به ایران</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>اقامت همراه</h4>
+          <p>هزینه‌های اقامت همراه بیمار در هتل</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>تاخیر و کنسلی پرواز</h4>
+          <p>جبران هزینه‌های تاخیر یا کنسلی</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>سرقت و گم شدن بار</h4>
+          <p>پوشش بار، مدارک و وسایل شخصی</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>مسئولیت مدنی</h4>
+          <p>پوشش خسارت‌های وارده به اشخاص ثالث</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش مدارک مورد نیاز -->
+  <div class="documents-section">
+    <h2 class="section-title">📄 مدارک مورد نیاز برای <span class="highlight">ثبت‌نام</span></h2>
+    <div class="documents-grid">
+      <div class="document-item">
+        <span class="doc-number">۱</span>
+        <h4>کپی پاسپورت</h4>
+        <p>صفحه اول پاسپورت معتبر</p>
+      </div>
+      <div class="document-item">
+        <span class="doc-number">۲</span>
+        <h4>کپی ویزا یا بلیط</h4>
+        <p>ویزا یا بلیط هواپیما</p>
+      </div>
+      <div class="document-item">
+        <span class="doc-number">۳</span>
+        <h4>فرم ثبت‌نام</h4>
+        <p>تکمیل فرم ثبت‌نام بیمه</p>
+      </div>
+      <div class="document-item">
+        <span class="doc-number">۴</span>
+        <h4>پرداخت حق بیمه</h4>
+        <p>پرداخت آنلاین یا حضوری</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش FAQ -->
+  <div class="faq-section">
+    <h2 class="section-title">❓ سوالات <span class="highlight">متداول</span></h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>آیا بیمه مسافرتی سامان، هزینه‌های درمانی در همه کشورها را پوشش می‌دهد؟</h4>
+        <p>بله، بیمه مسافرتی سامان در بیش از ۱۸۰ کشور جهان پوشش درمانی ارائه می‌دهد. برای اطلاع از لیست کامل کشورها، با کارشناسان ما تماس بگیرید.</p>
+      </div>
+      <div class="faq-item">
+        <h4>آیا بیمه مسافرتی، هزینه‌های ناشی از کرونا را پوشش می‌دهد؟</h4>
+        <p>بله، بیمه مسافرتی سامان شامل پوشش هزینه‌های ناشی از بیماری‌های واگیردار مانند کرونا می‌شود.</p>
+      </div>
+      <div class="faq-item">
+        <h4>آیا می‌توانم بیمه مسافرتی را برای مدت طولانی‌تر تمدید کنم؟</h4>
+        <p>بله، شما می‌توانید بیمه مسافرتی خود را تا ۱۲ ماه تمدید کنید. برای تمدید، با کارشناسان ما تماس بگیرید.</p>
+      </div>
+      <div class="faq-item">
+        <h4>آیا بیمه مهاجرت، پوشش اقامت طولانی‌مدت دارد؟</h4>
+        <p>بله، بیمه مهاجرت سامان برای افرادی که قصد اقامت طولانی‌مدت در خارج از کشور را دارند، پوشش‌های کامل ارائه می‌دهد.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA نهایی -->
+  <div class="cta-section">
+    <div class="cta-content">
+      <h2>🌍 سفر خود را با <span class="highlight-light">بیمه مسافرتی</span> سامان امن کنید</h2>
+      <p>با ثبت‌نام در بیمه مسافرتی و مهاجرت سامان، از پوشش درمانی، اقامتی و بیمه‌ای در سراسر جهان بهره‌مند شوید.</p>
+      <div class="cta-buttons">
+        <a href="/#form" class="cta-primary">📞 دریافت مشاوره رایگان</a>
+        <a href="tel:09123456789" class="cta-secondary">📱 تماس فوری: ۰۹۱۲۳۴۵۶۷۸۹</a>
+      </div>
+      <p class="cta-note">🎁 به ازای هر ثبت‌نام، <strong>۲۰۰ هزار تومان هدیه نقدی</strong> دریافت کنید</p>
+    </div>
+  </div>
+
+  <a href="/" class="back-button">← بازگشت به صفحه اصلی</a>
+</ArticleLayout>
+
+<style>
+  /* ===== هدر اصلی ===== */
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    border-radius: 24px;
+    padding: 40px 48px;
+    margin: 20px 0 40px;
+    color: white;
+    gap: 30px;
+  }
+  .hero-content {
+    flex: 1 1 55%;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 12px;
+  }
+  .hero-title .highlight {
+    color: #60a5fa;
+    text-shadow: 0 2px 8px rgba(96,165,250,0.3);
+  }
+  .hero-desc {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #60a5fa;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: white;
+    color: #0f172a;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  .hero-image {
+    flex: 0 0 120px;
+    text-align: center;
+  }
+  .hero-icon {
+    font-size: 5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* ===== بخش معرفی ===== */
+  .intro-section {
+    margin: 40px 0;
+  }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .intro-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .intro-text p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .intro-text .highlight {
+    color: #1e3a8a;
+    font-weight: 700;
+  }
+  .intro-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .benefit-card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-color: #2563eb;
+  }
+  .benefit-icon {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .benefit-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #1e3a8a;
+  }
+  .benefit-card p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* ===== بخش مزایا ===== */
+  .features-section, .types-section, .coverage-section, .documents-section, .faq-section {
+    margin: 50px 0;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .section-title .highlight {
+    color: #1e3a8a;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background: white;
+    padding: 28px 24px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(37,99,235,0.12);
+    border-color: #2563eb;
+  }
+  .feature-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .feature-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #1e3a8a;
+  }
+  .feature-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ===== بخش انواع بیمه ===== */
+  .types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  .type-card {
+    background: white;
+    padding: 24px 20px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  .type-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-color: #2563eb;
+  }
+  .type-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .type-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0 0 8px;
+  }
+  .type-card p {
+    font-size: 0.92rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0 0 12px;
+  }
+  .type-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .type-card ul li {
+    font-size: 0.88rem;
+    color: #4b5563;
+    padding: 4px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .type-card ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* ===== بخش پوشش‌ها ===== */
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .coverage-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f8fafc;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border-right: 4px solid #2563eb;
+  }
+  .coverage-icon {
+    font-size: 1.4rem;
+    flex: 0 0 30px;
+  }
+  .coverage-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 2px;
+    color: #1e3a8a;
+  }
+  .coverage-item p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* ===== بخش مدارک ===== */
+  .documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .document-item {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .document-item:hover {
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  }
+  .doc-number {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #1e3a8a;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .document-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0 0 4px;
+  }
+  .document-item p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* ===== بخش FAQ ===== */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .faq-item {
+    background: #f8fafc;
+    padding: 20px 24px;
+    border-radius: 16px;
+    border-right: 4px solid #2563eb;
+    transition: all 0.3s ease;
+  }
+  .faq-item:hover {
+    background: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  }
+  .faq-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 0 0 8px;
+  }
+  .faq-item p {
+    font-size: 0.92rem;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ===== CTA نهایی ===== */
+  .cta-section {
+    margin: 50px 0 30px;
+  }
+  .cta-content {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    padding: 48px 40px;
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+  }
+  .cta-content h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+  }
+  .cta-content h2 .highlight-light {
+    color: #60a5fa;
+  }
+  .cta-content p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .cta-primary {
+    display: inline-block;
+    background: white;
+    color: #0f172a;
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  .cta-secondary {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+  }
+  .cta-secondary:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+  }
+  .cta-note {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+  .cta-note strong {
+    color: #60a5fa;
+    font-weight: 700;
+  }
+
+  /* ===== بازگشت ===== */
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .back-button:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 28px 20px;
+    }
+    .hero-title {
+      font-size: 1.8rem;
+    }
+    .hero-stats {
+      gap: 16px;
+    }
+    .hero-image {
+      flex: 0 0 80px;
+    }
+    .hero-icon {
+      font-size: 3.5rem;
+    }
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+    .intro-benefits {
+      grid-template-columns: 1fr 1fr;
+    }
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    .coverage-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-content {
+      padding: 32px 20px;
+    }
+    .cta-content h2 {
+      font-size: 1.6rem;
+    }
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .types-grid {
+      grid-template-columns: 1fr;
+    }
+    .documents-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.4rem;
+    }
+    .intro-benefits {
+      grid-template-columns: 1fr;
+    }
+    .documents-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
