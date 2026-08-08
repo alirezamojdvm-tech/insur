@@ -1,0 +1,730 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+// کلمات کلیدی سئوی محلی و جذب کاربر
+const title = "بیمه کشاورزی سامان در ورامین، پاکدشت، پیشوا و قرچک | پوشش محصولات و دام";
+const description = "خرید بیمه کشاورزی سامان با پوشش محصولات زراعی، باغی، دام و طیور در ورامین، پیشوا، قرچک و پاکدشت. مشاوره و صدور فوری با علیرضا محمدی (کد ۴۱۶۶۷۲).";
+
+// اسکیما مارک‌آپ پیشرفته برای بیمه کشاورزی (Local SEO)
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "بیمه‌یار - نمایندگی بیمه سامان (کد ۴۱۶۶۷۲)",
+  "url": "https://insur.hsc-co.ir",
+  "description": "صدور و مشاوره بیمه کشاورزی سامان در جنوب شرق استان تهران.",
+  "areaServed": [
+    { "@type": "City", "name": "ورامین" },
+    { "@type": "City", "name": "پیشوا" },
+    { "@type": "City", "name": "قرچک" },
+    { "@type": "City", "name": "پاکدشت" }
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "صدور و مشاوره بیمه کشاورزی"
+    }
+  },
+  "agent": {
+    "@type": "Person",
+    "name": "علیرضا محمدی"
+  }
+};
+---
+
+<ArticleLayout title={title} description={description} articleTitle={title}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- هدر جذاب -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">🌾 ویژه کشاورزان و دامداران</span>
+      <h1 class="hero-title">با <span class="highlight">بیمه کشاورزی</span> سامان، از سرمایه‌تان محافظت کنید</h1>
+      <p class="hero-desc">
+        پوشش کامل محصولات زراعی، باغی، دام و طیور در برابر بلایای طبیعی، آفات و بیماری‌ها. مخصوص کشاورزان و دامداران ورامین، پاکدشت، پیشوا و قرچک.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">۱۰۰%</span>
+          <span class="stat-label">پوشش خسارت‌های طبیعی</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">۹۰%</span>
+          <span class="stat-label">پوشش آفات و بیماری‌ها</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">۴۸h</span>
+          <span class="stat-label">بازدید کارشناس در محل</span>
+        </div>
+      </div>
+      <a href="/#form" class="hero-cta">📞 دریافت مشاوره رایگان</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-icon">🌾</div>
+    </div>
+  </div>
+
+  <!-- بخش معرفی -->
+  <div class="intro-section">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2>چرا <span class="highlight">بیمه کشاورزی</span> در ورامین و پاکدشت ضروری است؟</h2>
+        <p>
+          <strong>ورامین، پاکدشت، پیشوا و قرچک</strong> از قطب‌های مهم کشاورزی استان تهران هستند. با توجه به تغییرات اقلیمی، افزایش آفات و بیماری‌ها و بلایای طبیعی مانند سیل، تگرگ و سرمازدگی، بیمه کشاورزی یک نیاز اساسی برای تمامی کشاورزان و دامداران این مناطق است.
+        </p>
+        <p>
+          <strong>بیمه کشاورزی سامان</strong> با ارائه پوشش‌های کامل و تخصصی، یکی از بهترین گزینه‌ها برای تأمین امنیت سرمایه‌های کشاورزی شماست. ما در <strong>بیمه‌یار</strong>، خدمات مشاوره تخصصی، <strong>بررسی زمین‌ها و دامداری‌ها</strong> و <strong>صدور فوری</strong> را برای همشهریان عزیز در <strong>ورامین، پاکدشت، پیشوا و قرچک</strong> به بهترین شکل ممکن انجام می‌دهیم.
+        </p>
+      </div>
+      <div class="intro-benefits">
+        <div class="benefit-card">
+          <span class="benefit-icon">🌾</span>
+          <h4>محصولات زراعی</h4>
+          <p>گندم، جو، ذرت، یونجه و سایر محصولات</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🍎</span>
+          <h4>محصولات باغی</h4>
+          <p>انواع میوه‌ها، پسته، گردو و مرکبات</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🐄</span>
+          <h4>دام و طیور</h4>
+          <p>گاو، گوسفند، مرغ، بوقلمون و آبزیان</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🏠</span>
+          <h4>ماشین‌آلات کشاورزی</h4>
+          <p>تراکتور، کمباین و ادوات کشاورزی</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش مزایا -->
+  <div class="features-section">
+    <h2 class="section-title">✨ مزایای <span class="highlight">بیمه کشاورزی</span> سامان</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌊</div>
+        <h4>پوشش بلایای طبیعی</h4>
+        <p>سیل، تگرگ، سرمازدگی، طوفان، خشکسالی و زلزله تحت پوشش کامل این بیمه قرار می‌گیرند.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🐛</div>
+        <h4>پوشش آفات و بیماری‌ها</h4>
+        <p>آفات گیاهی، بیماری‌های دام و طیور و خسارت‌های ناشی از علف‌های هرز تحت پوشش هستند.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚜</div>
+        <h4>پوشش ماشین‌آلات</h4>
+        <p>تراکتور، کمباین، سمپاش و سایر ادوات کشاورزی در برابر خسارت‌های ناشی از حوادث پوشش داده می‌شوند.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👨‍🌾</div>
+        <h4>پوشش حوادث کارگران</h4>
+        <p>کارگران و کارکنان مزارع و دامداری‌ها در برابر حوادث کاری تحت پوشش قرار می‌گیرند.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>بازدید و کارشناسی سریع</h4>
+        <p>کارشناسان ما در کمتر از ۴۸ ساعت در محل حاضر شده و خسارت‌ها را بررسی می‌کنند.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h4>پرداخت سریع خسارت</h4>
+        <p>پرداخت خسارت در کوتاه‌ترین زمان ممکن پس از تأیید کارشناسان.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش انواع بیمه کشاورزی -->
+  <div class="types-section">
+    <h2 class="section-title">📋 انواع <span class="highlight">بیمه کشاورزی</span> سامان</h2>
+    <div class="types-grid">
+      <div class="type-card">
+        <span class="type-icon">🌾</span>
+        <h4>بیمه محصولات زراعی</h4>
+        <p>پوشش کامل گندم، جو، ذرت، برنج، یونجه و سایر محصولات زراعی در برابر بلایای طبیعی و آفات.</p>
+        <ul>
+          <li>پوشش سرمازدگی و تگرگ</li>
+          <li>پوشش خشکسالی و سیل</li>
+          <li>پوشش آفات و بیماری‌ها</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">🍎</span>
+        <h4>بیمه محصولات باغی</h4>
+        <p>پوشش کامل باغ‌های میوه، پسته، گردو، بادام، مرکبات و سایر محصولات باغی.</p>
+        <ul>
+          <li>پوشش سرمازدگی بهاره و پاییزه</li>
+          <li>پوشش تگرگ و طوفان</li>
+          <li>پوشش آفات و بیماری‌های درختان</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">🐄</span>
+        <h4>بیمه دام و طیور</h4>
+        <p>پوشش کامل گاو، گوسفند، بز، مرغ، بوقلمون، شترمرغ و آبزیان در برابر بیماری‌ها و حوادث.</p>
+        <ul>
+          <li>پوشش بیماری‌های واگیردار</li>
+          <li>پوشش تلفات ناشی از حوادث</li>
+          <li>پوشش هزینه‌های درمانی</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <span class="type-icon">🚜</span>
+        <h4>بیمه ماشین‌آلات کشاورزی</h4>
+        <p>پوشش کامل تراکتور، کمباین، سمپاش، دروگر و سایر ادوات کشاورزی.</p>
+        <ul>
+          <li>پوشش خسارت‌های ناشی از حوادث</li>
+          <li>پوشش سرقت و آتش‌سوزی</li>
+          <li>پوشش هزینه‌های تعمیرات</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش پوشش‌ها -->
+  <div class="coverage-section">
+    <h2 class="section-title">🛡️ پوشش‌های <span class="highlight">بیمه کشاورزی</span> سامان</h2>
+    <div class="coverage-grid">
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>بلایای طبیعی</h4>
+          <p>سیل، تگرگ، سرمازدگی، طوفان، خشکسالی و زلزله</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>آفات و بیماری‌ها</h4>
+          <p>آفات گیاهی، بیماری‌های دام و طیور، علف‌های هرز</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>حوادث کارگران</h4>
+          <p>حوادث ناشی از کار در مزارع و دامداری‌ها</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>ماشین‌آلات کشاورزی</h4>
+          <p>حوادث، سرقت، آتش‌سوزی و هزینه‌های تعمیرات</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>سرمایه‌گذاری در مزرعه</h4>
+          <p>پوشش هزینه‌های آماده‌سازی زمین، کود، سم و بذر</p>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <span class="coverage-icon">✅</span>
+        <div>
+          <h4>مسئولیت مدنی کشاورز</h4>
+          <p>پوشش خسارت‌های وارده به اشخاص ثالث</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- بخش سوالات متداول -->
+  <div class="faq-section">
+    <h2 class="section-title">❓ سوالات <span class="highlight">متداول</span> کشاورزان</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>آیا بیمه کشاورزی، خسارت ناشی از تگرگ را پوشش می‌دهد؟</h4>
+        <p>بله، بیمه کشاورزی سامان به طور کامل خسارت‌های ناشی از تگرگ، سرمازدگی، سیل، طوفان و سایر بلایای طبیعی را پوشش می‌دهد. این پوشش برای تمامی محصولات زراعی، باغی و دامی اعمال می‌شود.</p>
+      </div>
+      <div class="faq-item">
+        <h4>آیا می‌توانم بیمه دام و طیور را جداگانه خریداری کنم؟</h4>
+        <p>بله، شما می‌توانید بیمه دام و طیور را به صورت جداگانه یا همراه با سایر بیمه‌نامه‌های کشاورزی خریداری کنید. برای اطلاع از شرایط و قیمت، با کارشناسان ما تماس بگیرید.</p>
+      </div>
+      <div class="faq-item">
+        <h4>چگونه می‌توانم خسارت خود را ثبت کنم؟</h4>
+        <p>برای ثبت خسارت، با کارشناسان ما تماس بگیرید. تیم کارشناسی ما در کمتر از ۴۸ ساعت در محل حاضر شده و خسارت‌ها را بررسی می‌کنند. پس از تأیید، خسارت در کوتاه‌ترین زمان پرداخت می‌شود.</p>
+      </div>
+      <div class="faq-item">
+        <h4>آیا بیمه کشاورزی، هزینه‌های آماده‌سازی زمین را پوشش می‌دهد؟</h4>
+        <p>بله، برخی از طرح‌های بیمه کشاورزی سامان شامل پوشش هزینه‌های آماده‌سازی زمین، خرید کود، سم و بذر نیز می‌شوند. برای اطلاع از جزئیات، با کارشناسان ما مشورت کنید.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA نهایی -->
+  <div class="cta-section">
+    <div class="cta-content">
+      <h2>🌾 با <span class="highlight-light">بیمه کشاورزی</span> سامان از سرمایه‌تان محافظت کنید</h2>
+      <p>با ثبت‌نام در بیمه کشاورزی سامان، از پوشش کامل محصولات، دام، طیور و ماشین‌آلات در برابر بلایای طبیعی، آفات و بیماری‌ها بهره‌مند شوید.</p>
+      <div class="cta-buttons">
+        <a href="/#form" class="cta-primary">📞 دریافت مشاوره رایگان</a>
+        <a href="tel:09123456789" class="cta-secondary">📱 تماس فوری: ۰۹۱۲۳۴۵۶۷۸۹</a>
+      </div>
+      <p class="cta-note">🎁 به ازای هر ثبت‌نام، <strong>۲۰۰ هزار تومان هدیه نقدی</strong> دریافت کنید</p>
+    </div>
+  </div>
+
+  <a href="/" class="back-button">← بازگشت به صفحه اصلی</a>
+</ArticleLayout>
+
+<style>
+  /* ===== هدر اصلی ===== */
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+    border-radius: 24px;
+    padding: 40px 48px;
+    margin: 20px 0 40px;
+    color: white;
+    gap: 30px;
+  }
+  .hero-content {
+    flex: 1 1 55%;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 12px;
+  }
+  .hero-title .highlight {
+    color: #fcd34d;
+    text-shadow: 0 2px 8px rgba(252,211,77,0.3);
+  }
+  .hero-desc {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fcd34d;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: white;
+    color: #064e3b;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  .hero-image {
+    flex: 0 0 120px;
+    text-align: center;
+  }
+  .hero-icon {
+    font-size: 5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* ===== بخش معرفی ===== */
+  .intro-section {
+    margin: 40px 0;
+  }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .intro-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .intro-text p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .intro-text .highlight {
+    color: #064e3b;
+    font-weight: 700;
+  }
+  .intro-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .benefit-card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-color: #047857;
+  }
+  .benefit-icon {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .benefit-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #064e3b;
+  }
+  .benefit-card p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* ===== بخش مزایا ===== */
+  .features-section, .types-section, .coverage-section, .faq-section {
+    margin: 50px 0;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .section-title .highlight {
+    color: #064e3b;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background: white;
+    padding: 28px 24px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(4,120,87,0.12);
+    border-color: #047857;
+  }
+  .feature-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .feature-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #064e3b;
+  }
+  .feature-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ===== بخش انواع بیمه ===== */
+  .types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  .type-card {
+    background: white;
+    padding: 24px 20px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  .type-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-color: #047857;
+  }
+  .type-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .type-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #064e3b;
+    margin: 0 0 8px;
+  }
+  .type-card p {
+    font-size: 0.92rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0 0 12px;
+  }
+  .type-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .type-card ul li {
+    font-size: 0.88rem;
+    color: #4b5563;
+    padding: 4px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .type-card ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* ===== بخش پوشش‌ها ===== */
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .coverage-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #f8fafc;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border-right: 4px solid #047857;
+  }
+  .coverage-icon {
+    font-size: 1.4rem;
+    flex: 0 0 30px;
+  }
+  .coverage-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 2px;
+    color: #064e3b;
+  }
+  .coverage-item p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  /* ===== بخش FAQ ===== */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .faq-item {
+    background: #f8fafc;
+    padding: 20px 24px;
+    border-radius: 16px;
+    border-right: 4px solid #047857;
+    transition: all 0.3s ease;
+  }
+  .faq-item:hover {
+    background: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  }
+  .faq-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #064e3b;
+    margin: 0 0 8px;
+  }
+  .faq-item p {
+    font-size: 0.92rem;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ===== CTA نهایی ===== */
+  .cta-section {
+    margin: 50px 0 30px;
+  }
+  .cta-content {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+    padding: 48px 40px;
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+  }
+  .cta-content h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+  }
+  .cta-content h2 .highlight-light {
+    color: #fcd34d;
+  }
+  .cta-content p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .cta-primary {
+    display: inline-block;
+    background: white;
+    color: #064e3b;
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  .cta-secondary {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s ease;
+  }
+  .cta-secondary:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+  }
+  .cta-note {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+  .cta-note strong {
+    color: #fcd34d;
+    font-weight: 700;
+  }
+
+  /* ===== بازگشت ===== */
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .back-button:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 28px 20px;
+    }
+    .hero-title {
+      font-size: 1.8rem;
+    }
+    .hero-stats {
+      gap: 16px;
+    }
+    .hero-image {
+      flex: 0 0 80px;
+    }
+    .hero-icon {
+      font-size: 3.5rem;
+    }
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+    .intro-benefits {
+      grid-template-columns: 1fr 1fr;
+    }
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    .coverage-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-content {
+      padding: 32px 20px;
+    }
+    .cta-content h2 {
+      font-size: 1.6rem;
+    }
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .types-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.4rem;
+    }
+    .intro-benefits {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
